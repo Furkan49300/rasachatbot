@@ -1,0 +1,13 @@
+{
+  "0": "add_comment",
+  "1": "affirm",
+  "2": "deny",
+  "3": "get_reservation_number",
+  "4": "greet",
+  "5": "inform_comment",
+  "6": "inform_date",
+  "7": "inform_name",
+  "8": "inform_people",
+  "9": "inform_phone",
+  "10": "new_reservation"
+}

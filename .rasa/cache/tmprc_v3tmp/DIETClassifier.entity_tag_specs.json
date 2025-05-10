@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-commentaire",
+      "2": "I-commentaire",
+      "3": "L-commentaire",
+      "4": "U-commentaire",
+      "5": "B-date",
+      "6": "I-date",
+      "7": "L-date",
+      "8": "U-date",
+      "9": "B-nom",
+      "10": "I-nom",
+      "11": "L-nom",
+      "12": "U-nom",
+      "13": "B-nombre_personnes",
+      "14": "I-nombre_personnes",
+      "15": "L-nombre_personnes",
+      "16": "U-nombre_personnes",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-commentaire": 1,
+      "I-commentaire": 2,
+      "L-commentaire": 3,
+      "U-commentaire": 4,
+      "B-date": 5,
+      "I-date": 6,
+      "L-date": 7,
+      "U-date": 8,
+      "B-nom": 9,
+      "I-nom": 10,
+      "L-nom": 11,
+      "U-nom": 12,
+      "B-nombre_personnes": 13,
+      "I-nombre_personnes": 14,
+      "L-nombre_personnes": 15,
+      "U-nombre_personnes": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]

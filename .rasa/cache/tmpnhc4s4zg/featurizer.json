@@ -1,0 +1,60 @@
+{
+  "type": "IntentMaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "back": 0,
+        "commentaire": 1,
+        "date_resa": 2,
+        "greet": 3,
+        "nbr_personnes": 4,
+        "new_resa": 5,
+        "nlu_fallback": 6,
+        "nom_resa": 7,
+        "out_of_scope": 8,
+        "restart": 9,
+        "session_start": 10
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_submit_reservation": 13,
+        "utter_ask_commentaire": 14,
+        "utter_ask_date": 15,
+        "utter_ask_nom": 16,
+        "utter_ask_nombre_personnes": 17,
+        "utter_greet": 18,
+        "utter_no_availability": 19,
+        "utter_submit": 20
+      },
+      "entities": {
+        "commentaire": 0,
+        "date": 1,
+        "nom": 2,
+        "nombre_personnes": 3
+      },
+      "slots": {
+        "date_0": 0,
+        "nombre_personnes_0": 1,
+        "nom_0": 2,
+        "commentaire_0": 3
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

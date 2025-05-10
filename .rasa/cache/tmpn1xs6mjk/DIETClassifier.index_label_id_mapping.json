@@ -1,0 +1,16 @@
+{
+  "0": "add_comment",
+  "1": "affirm",
+  "2": "deny",
+  "3": "get_allergens",
+  "4": "get_menu",
+  "5": "get_reservation_number",
+  "6": "greet",
+  "7": "inform_comment",
+  "8": "inform_date",
+  "9": "inform_name",
+  "10": "inform_people",
+  "11": "inform_phone",
+  "12": "new_reservation",
+  "13": "show_reservation_by_id"
+}

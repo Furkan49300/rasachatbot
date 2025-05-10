@@ -1,0 +1,81 @@
+{
+  "type": "IntentMaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "add_comment": 0,
+        "affirm": 1,
+        "back": 2,
+        "deny": 3,
+        "get_allergens": 4,
+        "get_menu": 5,
+        "get_reservation_number": 6,
+        "greet": 7,
+        "inform_comment": 8,
+        "inform_date": 9,
+        "inform_name": 10,
+        "inform_people": 11,
+        "inform_phone": 12,
+        "new_reservation": 13,
+        "nlu_fallback": 14,
+        "out_of_scope": 15,
+        "restart": 16,
+        "session_start": 17,
+        "show_reservation_by_id": 18
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "utter_greet": 13,
+        "utter_ask_date": 14,
+        "utter_ask_people": 15,
+        "utter_check_availability": 16,
+        "utter_available": 17,
+        "utter_not_available": 18,
+        "utter_ask_name": 19,
+        "utter_ask_phone": 20,
+        "utter_confirm_reservation": 21,
+        "utter_ask_comment": 22,
+        "utter_comment_saved": 23,
+        "utter_ask_action": 24,
+        "action_save_reservation": 25,
+        "action_get_reservation_number": 26,
+        "action_add_comment": 27,
+        "utter_menu": 28,
+        "utter_allergens": 29,
+        "action_show_reservation_by_id": 30,
+        "utter_reservation_not_found": 31
+      },
+      "entities": {
+        "date": 0,
+        "name": 1,
+        "number": 2,
+        "phone": 3,
+        "reservation_id": 4
+      },
+      "slots": {
+        "date_0": 0,
+        "number_0": 1,
+        "name_0": 2,
+        "phone_0": 3,
+        "reservation_id_0": 4
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

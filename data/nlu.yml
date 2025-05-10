@@ -1,0 +1,110 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - bonjour
+    - salut
+    - hello
+    - coucou
+
+- intent: new_reservation
+  examples: |
+    - je veux réserver une table
+    - je souhaite faire une réservation
+    - réserver une table pour ce soir
+    - est-ce que je peux réserver ?
+
+- intent: inform_date
+  examples: |
+    - ce soir
+    - demain
+    - pour [demain](date)
+    - [10 mai](date)
+    - le [15/05](date)
+    - prochain jour
+
+- intent: inform_people
+  examples: |
+    - pour [2](number) personnes
+    - nous serons [4](number)
+    - juste [1](number)
+    - une personne
+
+- intent: affirm
+  examples: |
+    - oui
+    - d'accord
+    - bien sûr
+
+- intent: deny
+  examples: |
+    - non
+    - pas maintenant
+    - je ne veux pas
+
+- intent: inform_name
+  examples: |
+    - [Ali](name)
+    - c'est au nom de [Claire](name)
+    - le nom est [Jean Dupont](name)
+
+- intent: inform_phone
+  examples: |
+    - mon numéro est [0601020304](phone)
+    - [0789456123](phone)
+    - appelez-moi au [0123456789](phone)
+
+- intent: get_reservation_number
+  examples: |
+    - quel est mon numéro de réservation ?
+    - j’ai une réservation, quel est le numéro ?
+    - numéro de réservation ?
+
+- intent: add_comment
+  examples: |
+    - je veux ajouter un commentaire
+    - puis-je préciser quelque chose ?
+    - j’ai un commentaire à ajouter
+
+- intent: inform_comment
+  examples: |
+    - je suis allergique aux noix
+    - merci de mettre une chaise bébé
+    - on viendra avec un chien
+
+- intent: get_menu
+  examples: |
+    - quel est le menu du jour ?
+    - je veux voir le menu
+    - affiche le menu du jour
+    - que proposez-vous aujourd’hui ?
+
+- intent: get_allergens
+  examples: |
+    - quels sont les allergènes ?
+    - je suis allergique, avez-vous une liste ?
+    - liste des allergènes
+    - allergènes dans vos plats ?
+
+- intent: show_reservation_by_id
+  examples: |
+    - voici mon numéro de réservation : [KJ5aP7x](reservation_id)
+    - j’ai le code [abc123](reservation_id)
+    - affiche la réservation [xyz456](reservation_id)
+
+- intent: cancel_reservation
+  examples: |
+    - je veux annuler ma réservation
+    - annuler une réservation
+    - supprimer ma réservation
+    - je souhaite annuler
+- intent: inform_reservation_id
+  examples: |
+    - [64sOsBwZ6PWe2bCZO0Bn](reservation_id)
+    - [abc123](reservation_id)
+    - mon code est [XYZ789](reservation_id)
+- intent: provide_reservation_id_for_cancellation
+  examples: |
+    - [GDoBV7wfJAb4WnNtjjNz](reservation_id)
+    - mon code est [abc123](reservation_id)
+    - [xyz789](reservation_id)

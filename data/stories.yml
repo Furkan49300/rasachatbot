@@ -1,0 +1,115 @@
+version: "3.1"
+stories:
+
+- story: réservation complète possible
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: new_reservation
+    - action: utter_ask_date
+    - intent: inform_date
+      entities:
+        - date: "demain"
+    - slot_was_set:
+        - date: "demain"
+    - action: utter_ask_people
+    - intent: inform_people
+      entities:
+        - number: "2"
+    - slot_was_set:
+        - number: "2"
+    - action: utter_check_availability
+    - action: utter_available
+    - action: utter_ask_name
+    - intent: inform_name
+      entities:
+        - name: "Ali"
+    - slot_was_set:
+        - name: "Ali"
+    - action: utter_ask_phone
+    - intent: inform_phone
+      entities:
+        - phone: "0601020304"
+    - slot_was_set:
+        - phone: "0601020304"
+    - action: action_save_reservation
+    - action: utter_confirm_reservation
+
+- story: réservation non disponible puis nouvelle date
+  steps:
+    - intent: new_reservation
+    - action: utter_ask_date
+    - intent: inform_date
+    - action: utter_ask_people
+    - intent: inform_people
+    - action: utter_check_availability
+    - action: utter_not_available
+    - intent: affirm
+    - action: utter_ask_date
+    - intent: inform_date
+    - action: utter_ask_people
+    - intent: inform_people
+    - action: utter_check_availability
+    - action: utter_available
+    - action: utter_ask_name
+    - intent: inform_name
+    - action: utter_ask_phone
+    - intent: inform_phone
+    - action: action_save_reservation
+    - action: utter_confirm_reservation
+
+- story: ajout commentaire
+  steps:
+    - intent: add_comment
+    - action: utter_ask_comment
+    - intent: inform_comment
+      entities:
+        - comment: "allergique aux noix"
+    - slot_was_set:
+        - comment: "allergique aux noix"
+    - action: action_add_comment
+    - action: utter_comment_saved
+
+- story: consulter le menu du jour
+  steps:
+    - intent: get_menu
+    - action: utter_menu
+
+- story: consulter les allergènes
+  steps:
+    - intent: get_allergens
+    - action: utter_allergens
+- story: afficher une réservation via numéro
+  steps:
+    - intent: show_reservation_by_id
+    - action: action_show_reservation_by_id
+- story: obtenir un numéro de réservation
+  steps:
+    - intent: get_reservation_number
+    - action: action_get_reservation_number
+- story: recherche par numéro de réservation
+  steps:
+    - intent: show_reservation_by_id
+    - action: utter_ask_reservation_id
+    - intent: show_reservation_by_id
+    - action: action_show_reservation_by_id
+- story: annuler une réservation
+  steps:
+    - intent: cancel_reservation
+    - action: utter_ask_reservation_id
+    - intent: provide_reservation_id_for_cancellation
+      entities:
+        - reservation_id: "DUMMY_ID"
+    - slot_was_set:
+        - reservation_id: "DUMMY_ID"
+    - action: action_cancel_reservation
+- story: afficher réservation
+  steps:
+    - intent: show_reservation_by_id
+    - slot_was_set:
+        - action_context: "display"
+    - action: utter_ask_reservation_id
+    - intent: show_reservation_by_id
+      entities:
+        - reservation_id: SOME_ID
+    - action: action_show_reservation_by_id

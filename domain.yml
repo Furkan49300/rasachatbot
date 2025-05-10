@@ -1,0 +1,155 @@
+version: "3.1"
+intents:
+  - greet
+  - new_reservation
+  - inform_date
+  - inform_people
+  - affirm
+  - deny
+  - inform_name
+  - inform_phone
+  - get_reservation_number
+  - add_comment
+  - inform_comment
+  - get_menu
+  - get_allergens
+  - show_reservation_by_id
+  - cancel_reservation
+  - inform_reservation_id
+  - provide_reservation_id_for_cancellation
+
+
+entities:
+  - date
+  - number
+  - name
+  - phone
+  - reservation_id
+
+slots:
+  date:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: date
+
+  number:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: number
+
+  name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: name
+
+  phone:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: phone
+
+  comment:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+  
+  reservation_id:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: reservation_id
+
+  action_context:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+
+
+responses:
+  utter_greet:
+    - text: "Bonjour, bienvenue au restaurant ! Que souhaitez-vous faire ?"
+      buttons:
+        - title: "📅 Réserver une table"
+          payload: /new_reservation
+        - title: "🧾 Voir le menu du jour"
+          payload: /get_menu
+        - title: "⚠️ Liste des allergènes"
+          payload: /get_allergens
+        - title: "🔍 Numéro de réservation"
+          payload:  /show_reservation_by_id
+        - title: "💬 Ajouter un commentaire"
+          payload: /add_comment
+        - title: "🗑️ Annuler une réservation"
+          payload: /cancel_reservation
+  utter_ask_date:
+    - text: "Pour quelle date souhaitez-vous réserver ?"
+  utter_ask_people:
+    - text: "Combien de personnes seront présentes ?"
+  utter_check_availability:
+    - text: "Je vérifie la disponibilité..."
+  utter_available:
+    - text: "C'est possible !"
+  utter_not_available:
+    - text: "Désolé, ce n'est pas possible à cette date. Voulez-vous essayer une autre date ?"
+  utter_ask_name:
+    - text: "Quel nom pour la réservation ?"
+  utter_ask_phone:
+    - text: "Quel est votre numéro de téléphone ?"
+  utter_confirm_reservation:
+    - text: "Merci ! Votre réservation est confirmée."
+  utter_ask_comment:
+    - text: "Quel commentaire souhaitez-vous ajouter ?"
+  utter_comment_saved:
+    - text: "Merci, votre commentaire a bien été enregistré."
+  utter_ask_action:
+    - text: "Souhaitez-vous réserver une table, obtenir votre numéro de réservation ou ajouter un commentaire ?"
+  utter_menu:
+    - text: |
+        **Menu du jour** :
+        - Entrée : Velouté de potiron
+        - Plat : Poulet rôti & légumes
+        - Dessert : Tarte aux pommes maison 
+  utter_allergens:
+    - text: |
+        **Liste des allergènes** :
+        - Gluten
+        - Fruits à coque
+        - Lactose
+        - Œufs
+        - Crustacés
+  utter_reservation_not_found:
+    - text: "Aucune réservation trouvée avec ce numéro"
+  utter_ask_reservation_id:
+    - text: "Quel est votre numéro de réservation ?"
+
+actions:
+  - utter_greet
+  - utter_ask_date
+  - utter_ask_people
+  - utter_check_availability
+  - utter_available
+  - utter_not_available
+  - utter_ask_name
+  - utter_ask_phone
+  - utter_confirm_reservation
+  - utter_ask_comment
+  - utter_comment_saved
+  - utter_ask_action
+  - action_save_reservation
+  - action_get_reservation_number
+  - action_add_comment
+  - utter_menu
+  - utter_allergens
+  - action_show_reservation_by_id
+  - action_cancel_reservation
