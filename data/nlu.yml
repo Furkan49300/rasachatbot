@@ -50,7 +50,7 @@ nlu:
 
 - intent: inform_phone
   examples: |
-    - mon numéro est [0601020304](phone)
+    - mon numero est [0601020304](phone)
     - [0789456123](phone)
     - appelez-moi au [0123456789](phone)
 
